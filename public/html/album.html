@@ -1,0 +1,448 @@
+<!-- this is a template for albums for sale -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photobooth Website || Album</title>
+    <!-- main style -->
+    <link rel="stylesheet" href="../style/styles.css">
+    <!-- album style -->
+    <link rel="stylesheet" href="../style/album.css">
+    
+    <!-- Core PhotoSwipe Style -->
+    <link rel="stylesheet" href="../style/PhotoSwipe/photoswipe.css">
+    <!-- Skin CSS file (styling of UI - buttons, caption, etc.)
+     In the folder of skin CSS file there are also:
+     - .png and .svg icons sprite, 
+     - preloader.gif (for browsers that do not support CSS animations) -->
+    <link rel="stylesheet" href="../style/PhotoSwipe/default-skin.css"> 
+    <!-- Core JS file -->
+    <script src="../js/PhotoSwipe/photoswipe.min.js"></script>
+    <!-- UI JS file -->
+    <!-- TODO: Depending on whether a password was provided, we surve the JS to download images -->
+    <!-- <script src="../js/PhotoSwipe/photoswipe-ui-default.min.js"></script> -->
+    <script src="../js/PhotoSwipe/photoswipe-ui-default.noshare.js"></script>
+
+     <!-- font awesome -->
+     <script src="https://kit.fontawesome.com/ff23690bb8.js"
+     crossorigin="anonymous">
+    </script>
+</head>
+
+<!-- sticky-contact-menu -->
+<div class="fixed-bottom">
+    <a class="btn-contact" id="btn-contact" href="#fade" data-hover="Fade">
+        <i class="fas fa-info fa-gradient"></i>
+    </a>
+</div>
+
+<div class="contact-modal" id="contact-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+       <div class="modal-header">
+            <h2>Kontakt Info</h2>
+            <span class="closeBtn"><i class="far fa-times-circle"></i></span>
+       </div>
+       <div class="contact-modal__body">
+            <img src="../img/logo_orange_into_yellow.png" class="contact-logo" alt="Photobooth">
+            <h1 class="contact-title">PHOTOBOOTH</h1>
+            <p>E-mail Addresse: irisjmunoz@gmail.com</p>
+            <p>Tel.: +43 681 104 21 581</p>
+            <button class="btn-locked-open">danke</button>
+        </div>
+        <div class="contact-modal__footer">
+            <div class="copyright">
+                <p>copyright &copy; iris j muñoz photobooth <span id="date"></span>. all rights reserved</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<body>
+    <!-- start of header -->
+    <header id="home">
+        <!-- start nav -->
+        <nav class="navbar">
+            <div class="nav-center">
+                <!-- nav header -->
+                <div class="nav-header">
+                    <a href="#home" class="scroll-link">
+                        <img src="../img/logo_orange_into_yellow.png" class="nav-logo" alt="Photobooth">
+                    </a>
+                    <!-- <button type="button" class="nav-toggle" id="nav-toggle" aria-label="nav toggler">
+                        <i class="fas fa-bars"></i>
+                    </button> -->
+                    <div class="nav-toggle" id="nav-toggle" aria-label="nav toggler">
+                        <div class="line-1"></div>
+                        <div class="line-2"></div>
+                        <div class="line-3"></div>
+                    </div>
+                </div>
+                <!-- navbar links -->
+                <div class="nav-links" id="nav-links">
+                    <a href="./index.html" class="nav-link redirect-link">zurück</a>
+                    <a href="#album" class="nav-link scroll-link">album</a>
+                    <a href="#gallery" class="nav-link scroll-link">fotos</a>
+                    <a href="#videos" class="nav-link scroll-link">video</a>
+                    <a href="http://www.irisjmunoz-photography.com" class="nav-link redirect-link">fotodienst</a>
+                </div>
+                <!-- nav social media icons -->
+                <div class="nav-icons">
+                    <a href="https://www.facebook.com" target="_blank" class="nav-icon">
+                        <i class="fab fa-facebook fa-gradient"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" class="nav-icon">
+                        <i class="fab fa-instagram fa-gradient"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- end of header -->
+    <section class="section album" id="album">
+        <div class="title-wrapper">
+            <h2 class="title">Featured <span class="subtitle">Albums</span></h2>
+        </div>
+        <!-- <a href="../img/ForSale/ForSaleThumbnail1.jpeg" data-size="600x480"></a> -->
+        <!-- .photo-album>h1.album-title>span{Geburtstags Feir}+(figure>a[href="../img/Album/Album$.jpeg"]>img[src="../img/Album/Album$.jpeg")*3 -->
+        <div class="photo-album photoswipe-gallery">
+            <h1 class="album-title"><span>Geburtstags Feir</span></h1>
+            <figure>
+                <a href="../img/Album/Album1.jpg" data-size="476x1459">
+                    <img src="../img/Album/Album1.jpg" alt="Album 1 Description">
+                </a>
+                <figcaption>Album1 caption goes here</figcaption>
+            </figure>
+            <figure>
+                <a href="../img/Album/Album2.jpg" data-size="476x1459">
+                    <img src="../img/Album/Album2.jpg" alt="Album 1 Description">
+                </a>
+                <figcaption>Album2 caption goes here</figcaption>
+            </figure>
+            <figure>
+                <a href="../img/Album/Album3.jpg" data-size="476x1459">
+                    <img src="../img/Album/Album3.jpg" alt="Album 1 Description">
+                </a>
+                <figcaption>Album3 caption goes here</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="section gallery" id="gallery">
+        <!-- title -->
+        <div class="title-wrapper">
+            <h2 class="title">Featured <span class="subtitle">Photos</span></h2>
+        </div>
+    
+        <!-- .gallery-center>(figure>a[href="../img/ForSale/ForSaleThumbnail$.jpeg"data-size="600x480"]>img[src="../img/ForSale/ForSaleThumbnail$.jpeg" alt="ForSaleThumbnail$ description"]^figcaption{ForSaleThumbnail$ caption goes here})*11 -->
+        <div class="gallery-center photoswipe-gallery">
+            <figure>
+                <a href="../img/ForSale/20200314_212401_010__MG_0340.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_212401_010__MG_0340.JPG" alt="ForSaleThumbnail1 description">
+                </a>
+                <figcaption>ForSaleThumbnail1 caption goes here</figcaption>
+            </figure>
+            <figure>
+                <a href="../img/ForSale/20200314_212414_338__MG_0341.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_212414_338__MG_0341.JPG" alt="ForSaleThumbnail2 description">
+                </a>
+                <figcaption>ForSaleThumbnail2 caption goes here</figcaption>
+            </figure>
+            <figure>
+                <a href="../img/ForSale/20200314_212427_394__MG_0342.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_212427_394__MG_0342.JPG" alt="ForSaleThumbnail3 description">
+                </a>
+                <figcaption>ForSaleThumbnail3 caption goes here</figcaption>
+            </figure>
+            <figure>
+                <a href="../img/ForSale/20200314_212440_635__MG_0343.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_212440_635__MG_0343.JPG" alt="ForSaleThumbnail4 description">
+                </a>
+                <figcaption>ForSaleThumbnail4 caption goes here</figcaption>
+            </figure>
+            <figure class="featured">
+                <a href="../img/ForSale/20200314_212524_148__MG_0344.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_212524_148__MG_0344.JPG" alt="ForSaleThumbnail5 description">
+                </a>
+                <figcaption>ForSaleThumbnail5 caption goes here</figcaption>
+            </figure>
+            <figure class="featured">
+                <a href="../img/ForSale/20200314_212537_364__MG_0345.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_212537_364__MG_0345.JPG" alt="ForSaleThumbnail6 description">
+                </a>
+                <figcaption>ForSaleThumbnail6 caption goes here</figcaption>
+            </figure>
+            <figure class="featured">
+                <a href="../img/ForSale/20200314_212550_608__MG_0346.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_212550_608__MG_0346.JPG" alt="ForSaleThumbnail7 description">
+                </a>
+                <figcaption>ForSaleThumbnail7 caption goes here</figcaption>
+            </figure>
+            <figure class="featured">
+                <a href="../img/ForSale/20200314_212603_893__MG_0347.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_212603_893__MG_0347.JPG" alt="ForSaleThumbnail8 description">
+                </a>
+                <figcaption>ForSaleThumbnail8 caption goes here</figcaption>
+            </figure>
+            <figure>
+                <a href="../img/ForSale/20200314_212728_601__MG_0348.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_212728_601__MG_0348.JPG" alt="ForSaleThumbnail9 description">
+                </a>
+                <figcaption>ForSaleThumbnail9 caption goes here</figcaption>
+            </figure>
+            <figure>
+                <a href="../img/ForSale/20200314_212741_686__MG_0349.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_212741_686__MG_0349.JPG" alt="ForSaleThumbnail10 description">
+                </a>
+                <figcaption>ForSaleThumbnail10 caption goes here</figcaption>
+            </figure>
+            <figure>
+                <a href="../img/ForSale/20200314_212754_919__MG_0350.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_212754_919__MG_0350.JPG" alt="ForSaleThumbnail11 description">
+                </a>
+                <figcaption>ForSaleThumbnail11 caption goes here</figcaption>
+            </figure>
+            <figure class="featured">
+                <a href="../img/ForSale/20200314_212807_971__MG_0351.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_212807_971__MG_0351.JPG" alt="ForSaleThumbnail11 description">
+                </a>
+                <figcaption>ForSaleThumbnail11 caption goes here</figcaption>
+            </figure>
+            <figure>
+                <a href="../img/ForSale/20200314_212903_344__MG_0352_3600.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_212903_344__MG_0352_3600.JPG" alt="ForSaleThumbnail11 description">
+                </a>
+                <figcaption>ForSaleThumbnail11 caption goes here</figcaption>
+            </figure>
+            <figure>
+                <a href="../img/ForSale/20200314_212916_164__MG_0353.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_212916_164__MG_0353.JPG" alt="ForSaleThumbnail11 description">
+                </a>
+                <figcaption>ForSaleThumbnail11 caption goes here</figcaption>
+            </figure>
+
+            <figure>
+                <a href="../img/ForSale/20200314_212929_297__MG_0354.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_212929_297__MG_0354.JPG" alt="ForSaleThumbnail11 description">
+                </a>
+                <figcaption>ForSaleThumbnail11 caption goes here</figcaption>
+            </figure>
+            <figure>
+                <a href="../img/ForSale/20200314_212942_768__MG_0355.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_212942_768__MG_0355.JPG" alt="ForSaleThumbnail11 description">
+                </a>
+                <figcaption>ForSaleThumbnail11 caption goes here</figcaption>
+            </figure>
+            <figure>
+                <a href="../img/ForSale/20200314_213201_272__MG_0358.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_213201_272__MG_0358.JPG" alt="ForSaleThumbnail11 description">
+                </a>
+                <figcaption>ForSaleThumbnail11 caption goes here</figcaption>
+            </figure>
+            <figure>
+                <a href="../img/ForSale/20200314_213214_589__MG_0359.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_213214_589__MG_0359.JPG" alt="ForSaleThumbnail11 description">
+                </a>
+                <figcaption>ForSaleThumbnail11 caption goes here</figcaption>
+            </figure>
+            <figure class="featured">
+                <a href="../img/ForSale/20200314_213227_406__MG_0360.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_213227_406__MG_0360.JPG" alt="ForSaleThumbnail11 description">
+                </a>
+                <figcaption>ForSaleThumbnail11 caption goes here</figcaption>
+            </figure>
+            <figure>
+                <a href="../img/ForSale/20200314_213240_464__MG_0361.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_213240_464__MG_0361.JPG" alt="ForSaleThumbnail11 description">
+                </a>
+                <figcaption>ForSaleThumbnail11 caption goes here</figcaption>
+            </figure>
+            <figure>
+                <a href="../img/ForSale/20200314_213357_743__MG_0362.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_213357_743__MG_0362.JPG" alt="ForSaleThumbnail11 description">
+                </a>
+                <figcaption>ForSaleThumbnail11 caption goes here</figcaption>
+            </figure>
+            <figure>
+                <a href="../img/ForSale/20200314_213410_959__MG_0363.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_213410_959__MG_0363.JPG" alt="ForSaleThumbnail11 description">
+                </a>
+                <figcaption>ForSaleThumbnail11 caption goes here</figcaption>
+            </figure>
+            <figure>
+                <a href="../img/ForSale/20200314_213424_042__MG_0364.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_213424_042__MG_0364.JPG" alt="ForSaleThumbnail11 description">
+                </a>
+                <figcaption>ForSaleThumbnail11 caption goes here</figcaption>
+            </figure>
+            <figure>
+                <a href="../img/ForSale/20200314_213437_319__MG_0365.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_213437_319__MG_0365.JPG" alt="ForSaleThumbnail11 description">
+                </a>
+                <figcaption>ForSaleThumbnail11 caption goes here</figcaption>
+            </figure>
+            <figure>
+                <a href="../img/ForSale/20200314_213551_171__MG_0366.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_213551_171__MG_0366.JPG" alt="ForSaleThumbnail11 description">
+                </a>
+                <figcaption>ForSaleThumbnail11 caption goes here</figcaption>
+            </figure>
+            <figure>
+                <a href="../img/ForSale/20200314_213604_451__MG_0367.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_213604_451__MG_0367.JPG" alt="ForSaleThumbnail11 description">
+                </a>
+                <figcaption>ForSaleThumbnail11 caption goes here</figcaption>
+            </figure>
+            <figure>
+                <a href="../img/ForSale/20200314_213617_674__MG_0368.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_213617_674__MG_0368.JPG" alt="ForSaleThumbnail11 description">
+                </a>
+                <figcaption>ForSaleThumbnail11 caption goes here</figcaption>
+            </figure>
+            <figure class="featured">
+                <a href="../img/ForSale/20200314_213630_969__MG_0369.JPG" data-size="5184x3456">
+                    <img src="../img/ForSale/20200314_213630_969__MG_0369.JPG" alt="ForSaleThumbnail11 description">
+                </a>
+                <figcaption>ForSaleThumbnail11 caption goes here</figcaption>
+            </figure>
+        </div>
+        
+    </section>
+
+    <section class="section videos" id="videos">
+        <div class="title-wrapper">
+            <h2 class="title">Featured <span class="subtitle">Boomerangs</span></h2>
+        </div>
+        <div class="video-center">
+            <figure>
+                <video class="video-clip" poster="../img/ForSale/ForSaleThumbnail1.jpeg" loop="loop" preload="auto">
+                    <source src="../img/ForSale/ForSaleThumbnail1.mp4" type="video/mp4">
+                </video>
+            </figure>
+            <figure class="featured">
+                <video class="video-clip" poster="../img/ForSale/ForSaleThumbnail2.jpeg" loop="loop" preload="auto">
+                    <source src="../img/ForSale/ForSaleThumbnail2.mp4" type="video/mp4">
+                </video>
+            </figure>
+            <figure>
+                <video class="video-clip" poster="../img/ForSale/ForSaleThumbnail3.jpeg" loop="loop" preload="auto">
+                    <source src="../img/ForSale/ForSaleThumbnail3.mp4" type="video/mp4">
+                </video>
+            </figure>
+            <figure>
+                <video class="video-clip" poster="../img/ForSale/ForSaleThumbnail4.jpeg" loop="loop" preload="auto">
+                    <source src="../img/ForSale/ForSaleThumbnail4.mp4" type="video/mp4">
+                </video>
+            </figure>
+            <figure class="featured">
+                <video class="video-clip" poster="../img/ForSale/ForSaleThumbnail5.jpeg" loop="loop" preload="auto">
+                    <source src="../img/ForSale/ForSaleThumbnail5.mp4" type="video/mp4">
+                </video>
+            </figure>
+            <figure>
+                <video class="video-clip" poster="../img/ForSale/ForSaleThumbnail6.jpeg" loop="loop" preload="auto">
+                    <source src="../img/ForSale/ForSaleThumbnail6.mp4" type="video/mp4">
+                </video>
+            </figure>
+            <figure>
+                <video class="video-clip" poster="../img/ForSale/ForSaleThumbnail7.jpeg" loop="loop" preload="auto">
+                    <source src="../img/ForSale/ForSaleThumbnail7.mp4" type="video/mp4">
+                </video>
+            </figure>
+            <figure>
+                <video class="video-clip" poster="../img/ForSale/ForSaleThumbnail8.jpeg" loop="loop" preload="auto">
+                    <source src="../img/ForSale/ForSaleThumbnail8.mp4" type="video/mp4">
+                </video>
+            </figure>
+            <figure>
+                <video class="video-clip" poster="../img/ForSale/ForSaleThumbnail9.jpeg" loop="loop" preload="auto">
+                    <source src="../img/ForSale/ForSaleThumbnail9.mp4" type="video/mp4">
+                </video>
+            </figure>
+            <figure>
+                <video class="video-clip" poster="../img/ForSale/ForSaleThumbnail10.jpeg" loop="loop" preload="auto">
+                    <source src="../img/ForSale/ForSaleThumbnail10.mp4" type="video/mp4">
+                </video>
+            </figure>
+            <figure class="featured">
+                <video class="video-clip" poster="../img/ForSale/ForSaleThumbnail11.jpeg" loop="loop" preload="auto">
+                    <source src="../img/ForSale/ForSaleThumbnail11.mp4" type="video/mp4">
+                </video>
+            </figure>
+        </div>
+    </section>
+    
+    <footer class="section footer">
+        <div class="footer-links">
+            <a href="./index.html" class="footer-link redirect-link">zurück</a>
+            <a href="#album" class="footer-link scroll-link">album</a>
+            <a href="#gallery" class="footer-link scroll-link">fotos</a>
+            <a href="#videos" class="footer-link scroll-link">video</a>
+            <a href="http://www.irisjmunoz-photography.com" class="footer-link redirect-link">fotodienst</a>
+        </div>
+        <div class="footer-contact">
+            <p>E-mail Addresse: irisjmunoz@gmail.com</p>
+            <p>Tel.: +43 681 104 21 581</p>
+        </div>
+        <div class="footer-icons">
+            <a href="https://www.facebook.com" target="_blank" class="footer-icon"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank" class="footer-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="copyrigh">
+            <p>copyright &copy; iris j muñoz photobooth <span id="date"></span>. all rights reserved</p>
+        </div>
+    </footer>
+
+    <!-- PhotoSwipe Modal Element -->
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <!-- Background of PhotoSwipe. 
+            It's a separate element as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+            <!-- Container that holds slides. 
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <!-- TODO: Depending on whether a password was provided, we surve the JS to download images -->
+                    <!-- <button class="pswp__button pswp__button--share" title="Share"></button> -->
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div> 
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/album.js"></script>
+</body>
+</html>

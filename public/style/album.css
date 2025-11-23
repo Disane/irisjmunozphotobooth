@@ -1,0 +1,201 @@
+/*
+    Recquires ./public/style/styles.css
+*/
+
+/* gallery */
+.gallery-center {
+    width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    /* grid-template-columns: repeat(1fr, minmax(168px, 1fr)); */
+    grid-auto-rows: 1fr;
+    grid-gap: 1em;
+    grid-auto-flow: dense;
+  }
+  
+  @media screen and (min-width:480px) {
+    .gallery-center {
+      grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+    }
+  }
+  
+  .gallery-center > figure {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: rgb(var(--primaryColor));
+    border: 0.25rem solid;
+    border-image-source: linear-gradient(15deg, rgb(var(--tertiaryColor)), rgb(var(--secondaryColor)));
+    border-image-slice: 1;
+    border-radius: 1rem;
+    /* overflow */
+    overflow: hidden;
+  }
+  
+  .gallery-center > figure > figcaption {
+    display: none;
+  }
+  
+  .gallery-center img {
+    flex: 1;
+    object-fit: cover;
+    max-width: 100%;
+    transition: var(--mainTransition);
+    transform: scale(1.2);
+  }
+  
+  .gallery-center > figure:hover {
+    border-image-source: linear-gradient(180deg, rgb(var(--tertiaryColor)), rgb(var(--secondaryColor)));
+  }
+  
+  .gallery figure:hover img {
+    opacity: 0.5;
+    transform: scale(1.5);
+    cursor: pointer;
+  }
+  
+  .gallery-center .featured {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+  
+  /* Video Gallery - Boomerangs */
+  
+  .video-center {
+    width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    /* grid-template-columns: repeat(1fr, minmax(168px, 1fr)); */
+    /* grid-auto-rows: 1fr; */
+    grid-auto-rows: 260px;
+    grid-gap: 0.5em;
+    grid-auto-flow: dense;
+  }
+  
+  @media screen and (min-width:520px) {
+    .video-center {
+      /* grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); */
+      grid-template-columns: repeat(auto-fill, minmax(168px, 320px));
+    }
+  }
+  
+  .video-center > figure {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: rgb(var(--primaryColor));
+    border: 0.25rem solid;
+    border-image-source: linear-gradient(15deg, rgb(var(--tertiaryColor)), rgb(var(--secondaryColor)));
+    border-image-slice: 1;
+    border-radius: 1rem;
+    /* overflow */
+    overflow: hidden;
+  }
+  
+  .video-center video {
+    flex: 1;
+    object-fit: cover;
+    max-width: 100%;
+    /* max-height: 100%;  */
+    transition: var(--mainTransition);
+  }
+  
+  .video-center > figure:hover {
+    border-image-source: linear-gradient(180deg, rgb(var(--tertiaryColor)), rgb(var(--secondaryColor)));
+  }
+  
+  .figure:hover > video {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  
+  .video-center .featured {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+  
+  /* photo album */
+  
+  .album {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .album-title {
+    position: inline;
+    background: radial-gradient(circle, rgb(var(--primaryColor))33%,  rgb(var(--secondaryColor)) 66%, rgb(var(--tertiaryColor)) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    background-size: 600%;
+    animation: gradient 7s linear infinite alternate;
+  }
+  
+  .photo-album {
+    display: block;
+    position: relative;
+  }
+  
+  .photo-album figure{
+    margin-bottom: 1rem;
+    transition: var(--mainTransition); 
+    box-shadow: 10px 8px 5px -4px rgba(0,0,0,0.41);
+  }
+  
+  .photo-album img {
+    max-width: 100%;
+    border: 0.25rem solid;
+    border-image-source: linear-gradient(15deg, rgb(var(--tertiaryColor)), rgb(var(--secondaryColor)));
+    border-image-slice: 1;
+  }
+  
+  .photo-album > figure > figcaption {
+    display: none;
+  }
+  
+  @media screen and (min-width:500px) {
+    .album {
+      width: 50%;
+    }
+    .photo-album figure {
+      max-width: 280px;
+    }
+  }
+  
+  @media screen and (min-width:640px) {
+    .album {
+      width: 70%;
+    }
+    .album-title {
+      position: absolute;
+      top: 45%;
+      border: 0.25rem solid;
+      border-image-source: linear-gradient(15deg, rgb(var(--tertiaryColor)), rgb(var(--secondaryColor)));
+      border-image-slice: 1;
+      border-radius: 1rem;
+      z-index: 2;
+      padding: 1.5rem 2.5rem;
+      /* background-color: rgb(var(--mainWhite)); */
+    }
+    .photo-album {
+      perspective: 800px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .photo-album figure {
+        flex: 0 0 25%;
+        transform: rotateX(30deg);
+        max-width: 280px;
+        max-height: 80%;
+        margin: 0 0.5rem;
+        opacity: 0.1;
+    }
+  
+    .photo-album figure:hover {
+      transform: rotateX(0deg);
+      z-index: 3;
+      opacity: 1;
+    }
+  }

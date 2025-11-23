@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Photobooth Website</title>
+    <!-- main style -->
+    <link rel="stylesheet" href="../style/styles.css">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/ff23690bb8.js"
+            crossorigin="anonymous">
+    </script>
+</head>
+
+<!-- sticky-contact-menu -->
+<div class="fixed-bottom">
+    <a class="btn-contact" id="btn-contact" href="#fade" data-hover="Fade">
+        <i class="fas fa-info fa-gradient"></i>
+    </a>
+</div>
+
+<div class="contact-modal" id="contact-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+       <div class="modal-header">
+            <h2>Kontakt Info</h2>
+            <span class="closeBtn"><i class="far fa-times-circle"></i></span>
+       </div>
+       <div class="contact-modal__body">
+            <img src="../img/logo_orange_into_yellow.png" class="contact-logo" alt="Photobooth">
+            <h1 class="contact-title">PHOTOBOOTH</h1>
+            <p>E-mail Addresse: irisjmunoz@gmail.com</p>
+            <p>Tel.: +43 681 104 21 581</p>
+            <button class="btn-locked-open">danke</button>
+        </div>
+        <div class="contact-modal__footer">
+            <div class="copyright">
+                <p>copyright &copy; iris j muñoz photobooth <span id="date"></span>. all rights reserved</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- end of sticky-contact-menu -->
+<body>
+    <!-- end of nav -->
+    <!-- start of header -->
+    <header class="header" id="home">
+        <!-- start nav -->
+        <nav class="navbar">
+            <div class="nav-center">
+                <!-- nav header -->
+                <div class="nav-header">
+                    <a href="#home" class="scroll-link">
+                        <img src="../img/logo_orange_into_yellow.png" class="nav-logo" alt="Photobooth">
+                    </a>
+                    <!-- <button type="button" class="nav-toggle" id="nav-toggle" aria-label="nav toggler">
+                        <i class="fas fa-bars"></i>
+                    </button> -->
+                    <div class="nav-toggle" id="nav-toggle" aria-label="nav toggler">
+                        <div class="line-1"></div>
+                        <div class="line-2"></div>
+                        <div class="line-3"></div>
+                    </div>
+                </div>
+                <!-- navbar links -->
+                <div class="nav-links" id="nav-links">
+                    <a href="#about" class="nav-link scroll-link">über uns</a>
+                    <a href="#services" class="nav-link scroll-link">dienste</a>
+                    <a href="#prices" class="nav-link scroll-link">angebote</a>
+                    <a href="#locked" class="nav-link scroll-link">inhalt</a>
+                    <a href="http://www.irisjmunoz-photography.com" class="nav-link redirect-link">fotodienst</a>
+                </div>
+                <!-- nav social media icons -->
+                <div class="nav-icons">
+                    <a href="https://www.facebook.com" target="_blank" class="nav-icon">
+                        <i class="fab fa-facebook fa-gradient"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" class="nav-icon">
+                        <i class="fab fa-instagram fa-gradient"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <!-- hero banner -->
+        <div class="banner">
+            <!-- h3.banner-title+h1.banner-title+a.banner-btn[href="#"] -->
+            <h3 class="banner-subtitle">Iris J Muñoz</h3>
+            <h1 class="banner-title">PHOTOBOOTH</h1>
+            <a href="#about" class="banner-btn scroll-link"><i class="fa fa-chevron-down"></i></a>
+        </div>
+    </header>
+    <!-- end of header -->
+    
+    <!-- content divider -->
+    <div class="content-divider"></div>
+    <!-- end content divider -->
+
+    <!-- start about section -->
+    <section class="section about" id="about">
+        <!-- title -->
+        <div class="title-wrapper">
+            <h1 class="title">Über <span class="subtitle">Uns</span></h1>
+        </div>
+        <!-- end of title  -->
+        <!-- about center -->
+        <div class="section-center about-center">
+            <!-- about img -->
+            <article class="about-img">
+                <img src="../img/photobooth_white_bg.jpg" alt="Iris J Muñoz Portrait">
+            </article>
+            <!-- end of about img -->
+            <!-- about info -->
+            <article class="about-info">
+                <h3 class="subtitle-alt">Willkommen im Photobooth!</h3>
+                <p>Unser professionelles Team ist bereit, Ihre Partys noch lustiger zu gestalten. Wir führen einen Photobooth-Service ein. Es gibt nur ein Leben, das wir leben dürfen. Warum also nicht noch angenehmer machen, indem wir unvergessliche Bilder und Videos aufnehmen?</p>
+                <br>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum recusandae obcaecati eius sequi! Quasi veritatis cumque dolorum aperiam accusamus minima, dolores laborum quo ducimus repudiandae quam! Incidunt provident sit ab?</p>
+            </article>
+            <!-- end of about info -->
+        </div>
+        <!-- end of about center -->
+    </section>
+    <!-- end of about section -->
+    
+    <!-- start prices section -->
+    <section class="section prices" id="prices">
+        <!-- title -->
+        <div class="title-wrapper">
+            <h2 class="title">Fotoautomat <span class="subtitle">Angebote</span></h2>
+        </div>
+        <!-- end of title -->
+        <div class="section-center prices-center">                
+            <br>
+            <!-- Price Cards -->
+            <!-- Package 1 -->
+            <article class="flex-price__card">
+                <div class="price__card-content">
+                    <div class="title">Fotobox 1 paket</div>
+                    <hr class="style__1">
+                    <p class="description">Bietet Ihnen die Basics einer Fotobox und den Spaß zum günstigsten Preis, ohne verbauten Drucker.Teilen Sie Ihre Fotos auf Facebook oder schicken Sie sie per Mail an Ihre Freunde. In Wien.</p>
+                    <hr class="style__1">
+                    <ul class="price-list">
+                        <li class="price-bulletpoint">unlimitierte Anzahl an Fotos</li>
+                        <li class="price-bulletpoint">ohne Fotoausdruck</li>
+                        <li class="price-bulletpoint">individuelles Fotolayout</li>
+                        <li class="price-bulletpoint">jede Menge tolle Accessoires</li>
+                        <li class="price-bulletpoint">4 Stunden</li>
+                    </ul>
+                    <hr class="style__2">
+                    <div class="price">220 €</div>
+                </div>
+            </article>
+            <!-- Package 2 -->
+            <article class="flex-price__card">
+                <div class="price__card-content">
+                    <div class="title">Fotobox 2 paket</div>
+                    <hr class="style__1">
+                    <p class="description">Eine Fotobox und einen externen Drucker. Teilen Sie Ihre Fotos Facebook, Twitter oder schicken Sie sie per Mail an Ihre Freunde.</p>
+                    <hr class="style__1">
+                    <ul class="price-list">
+                        <li class="price-bulletpoint">unlimitierte Anzahl an Fotos</li>
+                        <li class="price-bulletpoint">Mit Fotoausdruck</li>
+                        <li class="price-bulletpoint">individuelles Fotolayout</li>
+                        <li class="price-bulletpoint">jede Menge tolle Accessoires</li>
+                        <li class="price-bulletpoint">4 Stunden oder 200 Fotoausdruck</li>
+                        <li class="price-bulletpoint">extra Fotoausdruck 1€ pro stuck.</li>
+                    </ul>
+                    <hr class="style__2">
+                    <div class="price">280 €</div>
+                </div>
+            </article>
+            <!-- Package 3 -->
+            <article class="flex-price__card">
+                <div class="price__card-content">
+                    <div class="title">Fotobox 3 paket</div>
+                    <hr class="style__1">
+                    <p class="description">Eine Fotobox und einen externen Drucker. Teilen Sie Ihre Fotos Facebook, Twitter oder schicken Sie sie per Mail an Ihre Freunde.</p>
+                    <hr class="style__1">
+                    <ul class="price-list">
+                        <li class="price-bulletpoint">unlimitierte Anzahl an Fotos</li>
+                        <li class="price-bulletpoint">Mit Fotoausdruck</li>
+                        <li class="price-bulletpoint">individuelles Fotolayout</li>
+                        <li class="price-bulletpoint">jede Menge tolle Accessoires</li>
+                        <li class="price-bulletpoint">4 Stunden</li>
+                        <li class="price-bulletpoint">unlimitiertem Fotoausdruck</li>
+                    </ul>
+                    <hr class="style__2">
+                    <br>
+                    <div class="price">350 €</div>
+                </div>
+            </article>
+            <!-- end of Price Cards -->
+        </div>
+    </section>
+    <!-- end of prices section -->
+    
+    <!-- start parallax divider -->
+    <div class="parallax-accessories-divider">
+        <div class="parallax-text">
+            inklusive lustige zubehöre
+        </div>
+    </div>
+    <!-- end parallax divider -->
+
+    <!-- content divider -->
+    <div class="content-divider"></div>
+    <!-- end content divider -->
+
+    <!-- start services section -->
+    <section class="section services" id="services">
+        <!-- title -->
+        <div class="title-wrapper">
+            <h2 class="title">Unser <span class="subtitle">Dienste</span></h2>
+        </div>
+        <!-- end of title -->
+        <!-- section-center -->
+        <div class="section-center services-center">
+            <!-- single service -->
+            <article class="service">
+                <span class="service-icon"><i class="fab fa-phoenix-framework fa-gradient"></i></span>
+                <div class="service-info">
+                    <h4 class="service-title">Fotoentwurf</h4>
+                    <p class="service-text">Aus vorgenerierten Fotoenwort suchen Sie sich ihre pasende Foto aus.</p>
+                </div>
+            </article>
+            <!-- end of single service -->
+            <!-- single service -->
+            <article class="service">
+                <span class="service-icon"><i class="fas fa-mask fa-gradient"></i></span>
+                <div class="service-info">
+                    <h4 class="service-title">Kostume</h4>
+                    <p class="service-text">Wir bieten ihnen jede menge lustige Kostume, damit Sie über sich einartige Fotos erstellen können.</p>
+                </div>
+            </article>
+            <!-- end of single service -->
+            <!-- single service -->
+            <article class="service">
+                <span class="service-icon"><i class="far fa-images fa-gradient"></i></span>
+                <div class="service-info">
+                    <h4 class="service-title">Online Gallery</h4>
+                    <p class="service-text">Gerne stellen wir Ihnen nach der Veranstaltung Ihre Fotos in ein Kennwortgeshütztes Gallery frei.</p>
+                </div>
+            </article>
+            <!-- end of single service -->
+            <!-- single service -->
+            <article class="service">
+                <span class="service-icon"><i class="fas fa-film fa-gradient"></i></span>
+                <div class="service-info">
+                    <h4 class="service-title">GIF-Boomerang</h4>
+                    <p class="service-text">Wir erstellen gerne für Sie lustige kurz Videoaufname den wir auf unsere Website Kennwortshützt hochladen.</p>
+                </div>
+            </article>
+            <!-- end of single service -->
+        </div>
+        <!-- end of section center -->
+    </section>
+    <!-- end services section -->
+
+    <!-- start parallax divider -->
+    <div class="parallax-photobooth-divider">
+        <div class="parallax-text">
+            Ihre Photobooth Dienst
+        </div>
+    </div>
+    <!-- end parallax divider -->
+
+    <!-- content divider -->
+    <div class="content-divider"></div>
+    <!-- end content divider -->
+
+    <section class="section locked" id="locked">
+        <!-- title -->
+        <div class="title-wrapper">
+            <h2 class="title">Gesperrter <span class="subtitle">Inhalt</span></h2>
+        </div>
+        <!-- section-center -->
+        <div class="section-center locked-center">
+            <!-- card 1 -->
+            <article class="locked-card">
+                <div class="locked-img-container">
+                    <div class="locked-img-backdrop"></div>
+                    <img src="../img/ForSale/20200314_212537_364__MG_0345.JPG" alt="locked image" class="locked-img">
+                    <p class="locked-date">März, 2020</p>
+                    <span class="locked-icon"><i class="fas fa-lock"></i></span>
+                </div>
+                <div class="locked-footer">
+                    <h4 class="locked-title"></h4>
+                    <div class="locked-info">
+                        <p class="locked-location">Vienna</p>
+                        <div class="locked-details">
+                            <p class="locked-pending">anstehend</p>
+                            <p>50 EUR</p>
+                        </div>
+                    </div>
+                    <form class="btn-container" action="./album.html">
+                        <button class="btn-locked-closed">gesperrt</button>
+                    </form>
+                </div>
+            </article>
+            <!-- end of card 1 -->
+            <!-- card 2 -->
+            <article class="locked-card">
+                <div class="locked-img-container">
+                    <!-- <div class="locked-img-backdrop"></div> -->
+                    <img src="../img/ForSale/20200314_212807_971__MG_0351.JPG" alt="locked image" class="locked-img">
+                    <p class="locked-date">April, 2020</p>
+                    <!-- <span class="locked-icon"><i class="fas fa-lock"></i></span> -->
+                </div>
+                <div class="locked-footer">
+                    <h4 class="locked-title"></h4>
+                    <div class="locked-info">
+                        <p class="locked-location">Vienna</p>
+                        <div class="locked-details">
+                            <p class="locked-done">ferting</p>
+                            <p>39.90 EUR</p>
+                        </div>
+                    </div>
+                    <form class="btn-container" action="./album.html">
+                        <button class="btn-locked-open">öffnen</button>
+                    </form>
+                </div>
+            </article>
+            <!-- end of card 2 -->
+             <!-- card 3 -->
+             <article class="locked-card">
+                <div class="locked-img-container">
+                    <!-- <div class="locked-img-backdrop"></div> -->
+                    <img src="../img/ForSale/20200314_213551_171__MG_0366.JPG" alt="locked image" class="locked-img">
+                    <p class="locked-date">May, 2020</p>
+                    <!-- <span class="locked-icon"><i class="fas fa-lock"></i></span> -->
+                </div>
+                <div class="locked-footer">
+                    <h4 class="locked-title"></h4>
+                    <div class="locked-info">
+                        <p class="locked-location">Vienna</p>
+                        <div class="locked-details">
+                            <p class="locked-done">ferting</p>
+                            <p>25.50 EUR</p>
+                        </div>
+                    </div>
+                    <form class="btn-container" action="./album.html">
+                        <button class="btn-locked-open">öffnen</button>
+                    </form>
+                </div>
+            </article>
+            <!-- end of card 3 -->
+            <!-- card 4 -->
+            <article class="locked-card">
+                <div class="locked-img-container">
+                    <div class="locked-img-backdrop"></div>
+                    <img src="../img/ForSale/20200314_212537_364__MG_0345.JPG" alt="locked image" class="locked-img">
+                    <p class="locked-date">März, 2020</p>
+                    <span class="locked-icon"><i class="fas fa-lock"></i></span>
+                </div>
+                <div class="locked-footer">
+                    <h4 class="locked-title"></h4>
+                    <div class="locked-info">
+                        <p class="locked-location">Vienna</p>
+                        <div class="locked-details">
+                            <p class="locked-pending">anstehend</p>
+                            <p>50 EUR</p>
+                        </div>
+                    </div>
+                    <form class="btn-container" action="./album.html">
+                        <button class="btn-locked-closed">gesperrt</button>
+                    </form>
+                </div>
+            </article>
+            <!-- end of card 4 -->
+            <!-- card 5 -->
+            <article class="locked-card">
+                <div class="locked-img-container">
+                    <!-- <div class="locked-img-backdrop"></div> -->
+                    <img src="../img/ForSale/20200314_212807_971__MG_0351.JPG" alt="locked image" class="locked-img">
+                    <p class="locked-date">April, 2020</p>
+                    <!-- <span class="locked-icon"><i class="fas fa-lock"></i></span> -->
+                </div>
+                <div class="locked-footer">
+                    <h4 class="locked-title"></h4>
+                    <div class="locked-info">
+                        <p class="locked-location">Vienna</p>
+                        <div class="locked-details">
+                            <p class="locked-done">ferting</p>
+                            <p>39.90 EUR</p>
+                        </div>
+                    </div>
+                    <form class="btn-container" action="./album.html">
+                        <button class="btn-locked-open">öffnen</button>
+                    </form>
+                </div>
+            </article>
+            <!-- end of card 2 -->
+             <!-- card 3 -->
+             <article class="locked-card">
+                <div class="locked-img-container">
+                    <!-- <div class="locked-img-backdrop"></div> -->
+                    <img src="../img/ForSale/20200314_213551_171__MG_0366.JPG" alt="locked image" class="locked-img">
+                    <p class="locked-date">May, 2020</p>
+                    <!-- <span class="locked-icon"><i class="fas fa-lock"></i></span> -->
+                </div>
+                <div class="locked-footer">
+                    <h4 class="locked-title"></h4>
+                    <div class="locked-info">
+                        <p class="locked-location">Vienna</p>
+                        <div class="locked-details">
+                            <p class="locked-done">ferting</p>
+                            <p>25.50 EUR</p>
+                        </div>
+                    </div>
+                    <form class="btn-container" action="./album.html">
+                        <button class="btn-locked-open">öffnen</button>
+                    </form>
+                </div>
+            </article>
+            <!-- end of card 6 -->
+             <!-- card 3 -->
+             <article class="locked-card">
+                <div class="locked-img-container">
+                    <!-- <div class="locked-img-backdrop"></div> -->
+                    <img src="../img/ForSale/20200314_213551_171__MG_0366.JPG" alt="locked image" class="locked-img">
+                    <p class="locked-date">May, 2020</p>
+                    <!-- <span class="locked-icon"><i class="fas fa-lock"></i></span> -->
+                </div>
+                <div class="locked-footer">
+                    <h4 class="locked-title"></h4>
+                    <div class="locked-info">
+                        <p class="locked-location">Vienna</p>
+                        <div class="locked-details">
+                            <p class="locked-done">ferting</p>
+                            <p>25.50 EUR</p>
+                        </div>
+                    </div>
+                    <form class="btn-container" action="./album.html">
+                        <button class="btn-locked-open">öffnen</button>
+                    </form>
+                </div>
+            </article>
+            <!-- end of card 6 -->
+        </div>
+    </section>
+
+    <!-- content divider -->
+    <div class="content-divider"></div>
+    <!-- end content divider -->
+
+    <footer class="section footer">
+        <div class="footer-links">
+            <a href="#home" class="footer-link scroll-link">heim</a>
+            <a href="#about" class="footer-link scroll-link">über uns</a>
+            <a href="#services" class="footer-link scroll-link">photobooth</a>
+            <a href="#prices" class="footer-link scroll-link">angebote</a>
+            <a href="#locked" class="footer-link scroll-link">inhalt</a>
+            <a href="http://www.irisjmunoz-photography.com" class="footer-link redirect-link">fotodienst</a>
+        </div>
+        <div class="footer-contact">
+            <p>E-mail Addresse: irisjmunoz@gmail.com</p>
+            <p>Tel.: +43 681 104 21 581</p>
+        </div>
+        <div class="footer-icons">
+            <a href="https://www.facebook.com" target="_blank" class="footer-icon"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank" class="footer-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="copyright">
+            <p>copyright &copy; iris j muñoz photobooth <span id="date"></span>. all rights reserved</p>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>

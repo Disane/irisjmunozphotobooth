@@ -1,0 +1,27 @@
+{
+  "name": "photoboothwebsite",
+  "version": "1.0.0",
+  "description": "Static Photobooth website (HTML/CSS/JS only)",
+  "private": true,
+  "scripts": {
+    "start": "echo \"Static site: open public/html/index.html in your browser.\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Disane/PhotoBoothWebsite.git"
+  },
+  "keywords": [
+    "static-site",
+    "photobooth",
+    "css",
+    "html",
+    "javascript"
+  ],
+  "author": "disane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Disane/PhotoBoothWebsite/issues"
+  },
+  "homepage": "https://github.com/Disane/PhotoBoothWebsite#readme",
+  "dependencies": {}
+}
